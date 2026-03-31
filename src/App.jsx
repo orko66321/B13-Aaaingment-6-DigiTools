@@ -2,10 +2,13 @@ import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Cart from './components/Cart/Cart'
+import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar/Navbar'
+import Pricing from './components/Pricing/Pricing'
 import Products from './components/Products/Products'
 import Stats from './components/Stats/Stats'
+import HowItWorks from './components/HowItWorks/HowItWorks'
 
 function App() {
   const [activeTab, setActiveTab] = useState('product')
@@ -45,6 +48,9 @@ function App() {
       ) : (
         <Cart carts={carts} setCarts={setCarts}></Cart>
       )}
+      <HowItWorks></HowItWorks>
+      <Pricing></Pricing>
+      <CTA></CTA>
       <Footer></Footer>
     </div>
   )

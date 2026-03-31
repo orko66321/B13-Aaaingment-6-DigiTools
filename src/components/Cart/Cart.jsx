@@ -1,17 +1,21 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 const Cart = ({ carts, setCarts }) => {
   const [checkoutDone, setCheckoutDone] = useState(false)
 
   const handleRemoveItem = (indexToRemove) => {
+    const removedItem = carts[indexToRemove]
     const newCarts = [...carts]
     newCarts.splice(indexToRemove, 1)
     setCarts(newCarts)
+    toast.info(`${removedItem.name} removed from cart`)
   }
 
   const handleCheckout = () => {
     setCarts([])
     setCheckoutDone(true)
+    toast.success('Checkout completed successfully')
   }
 
 let totalPrice = 0

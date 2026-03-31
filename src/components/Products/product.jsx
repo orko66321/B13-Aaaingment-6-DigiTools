@@ -1,12 +1,17 @@
 import { CheckCircle2 } from 'lucide-react'
+import { toast } from 'react-toastify'
 
 const Product = ({product,carts,setCarts}) => {
     const{name,description,price,period,tag,tagType,features,icon}=product;
     const isInCart = carts.some((cartItem) => cartItem.id === product.id)
 
     const handleBuyNowBtn=()=>{
-        if (isInCart) return
+        if (isInCart) {
+            toast.warning(`${name} is already in your cart`)
+            return
+        }
         setCarts((prevCarts) => [...prevCarts, product])
+        toast.success(`${name} added to cart`)
     }
     
     return (

@@ -7,7 +7,7 @@ function Navbar({carts}) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="w-full border-y-2  bg-[#f6f7fb]">
+    <header className="w-full border-y-2  bg-[#f6f8ff] sticky">
       <nav className="mx-auto flex w-full max-w-300 items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
         <a
           href="#"
