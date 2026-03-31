@@ -10,7 +10,7 @@ function Footer() {
     <footer className="bg-[#0a1329] text-white">
       <div />
 
-      <div className="border border-[#12d8d2] border-t-2">
+      <div>
         <div className="mx-auto w-full max-w-300 px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr_1fr]">
             <div className="max-w-sm">
