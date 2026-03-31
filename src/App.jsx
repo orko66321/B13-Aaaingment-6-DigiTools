@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
+import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar/Navbar'
 import Products from './components/Products/Products'
@@ -39,24 +40,7 @@ function App() {
       {activeTab === 'product' ? (
         <Products carts={carts} setCarts={setCarts}></Products>
       ) : (
-        <div className="container mx-auto my-12 rounded-3xl bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-bold text-slate-800">Your Cart</h2>
-          {carts.length === 0 ? (
-            <p className="mt-4 text-gray-500">No products added yet.</p>
-          ) : (
-            <div className="mt-6 space-y-3">
-              {carts.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex items-center justify-between rounded-xl border border-gray-100 p-4"
-                >
-                  <span className="font-semibold text-slate-700">{item.name}</span>
-                  <span className="font-bold text-slate-900">${item.price}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        <Cart carts={carts} setCarts={setCarts}></Cart>
       )}
       <Footer></Footer>
     </div>
