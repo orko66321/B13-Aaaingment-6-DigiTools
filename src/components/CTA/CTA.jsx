@@ -1,8 +1,9 @@
 function CTA() {
   return (
     <section className="bg-slate-50 py-20">
-      <div className="mx-auto w-full max-w-300 px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2.5rem] bg-indigo-600 p-10 text-center text-white shadow-xl md:p-16">
+      <div className="mx-auto w-full container px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[2.5rem] bg-linear-to-r from-indigo-600 via-purple-600 to-fuchsia-500 p-10 text-center text-white shadow-xl md:p-16"
+>
           <h2 className="text-4xl font-black leading-tight md:text-5xl">
             Ready To Transform Your Workflow?
           </h2>
