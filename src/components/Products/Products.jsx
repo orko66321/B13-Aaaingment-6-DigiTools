@@ -46,7 +46,7 @@ const Products = ({ carts, setCarts }) => {
                 to boost your productivity and creativity.</p>
             </div>
           
-            <div className='grid grid-cols-2 md:grid-cols-3  gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3  gap-10'>
                 {data.map((product) => (
                     <Product
                         product={product}
