@@ -17,23 +17,26 @@ function App() {
       <Banner></Banner>
       <Stats></Stats>
       <div className="mt-10 flex items-center justify-center">
-        <div className="tabs tabs-box theme-tabs rounded-3xl bg-white px-2 py-2 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
-          <input
-            type="radio"
-            name="my_tabs_1"
-            className="tab rounded-2xl px-7 text-base font-semibold"
-            aria-label="Products"
-            checked={activeTab === 'product'}
-            onChange={() => setActiveTab('product')}
-          />
-          <input
-            type="radio"
-            name="my_tabs_1"
-            className="tab rounded-2xl px-7 text-base font-semibold"
-            aria-label={`Cart (${carts.length})`}
-            checked={activeTab === 'cart'}
-            onChange={() => setActiveTab('cart')}
-          />
+        <div className="flex items-center gap-2 rounded-full bg-white p-2 shadow-sm">
+          <button
+            type="button"
+            onClick={() => setActiveTab('product')}
+            className={`rounded-full px-6 py-2 text-sm font-semibold ${
+              activeTab === 'product' ? 'bg-[#6d30ff] text-white' : 'text-slate-700'
+            }`}
+          >
+            Products
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('cart')}
+            className={`rounded-full px-6 py-2 text-sm font-semibold ${
+              activeTab === 'cart' ? 'bg-[#6d30ff] text-white' : 'text-slate-700'
+            }`}
+          >
+            Cart ({carts.length})
+          </button>
         </div>
       </div>
 
