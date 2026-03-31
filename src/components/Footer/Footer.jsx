@@ -8,7 +8,7 @@ const policyLinks = ['Privacy Policy', 'Terms of Service', 'Cookies']
 function Footer() {
   return (
     <footer className="bg-[#0a1329] text-white">
-      <div className="h-20 w-full bg-gradient-to-r from-[#4b35f6] via-[#7a2af8] to-[#ae0ff3]" />
+      <div />
 
       <div className="border border-[#12d8d2] border-t-2">
         <div className="mx-auto w-full max-w-300 px-4 py-16 sm:px-6 lg:px-8">
