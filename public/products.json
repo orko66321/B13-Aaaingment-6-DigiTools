@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "AI Content Writer Pro",
+    "description": "Generate blog posts, ads, and social captions with ready-to-edit templates.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["100+ templates", "Brand tone presets", "One-click rewrite"],
+    "icon": "/assets/products/writing-tool.png"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Kit",
+    "description": "Plan and publish content calendars with AI-assisted copy suggestions.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Auto caption ideas", "Hashtag assistant", "Post scheduler"],
+    "icon": "/assets/products/social-media.png"
+  },
+  {
+    "id": 3,
+    "name": "Design Asset Vault",
+    "description": "Get premium mockups, UI kits, and presentation assets in one bundle.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["500+ design assets", "Commercial license", "Figma friendly"],
+    "icon": "/assets/products/design-tool.png"
+  },
+  {
+    "id": 4,
+    "name": "Ops Workflow Manager",
+    "description": "Track recurring tasks, automate reminders, and keep teams aligned.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Task automation", "Team roles", "Progress dashboard"],
+    "icon": "/assets/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Portfolio Builder Plus",
+    "description": "Create modern personal portfolio sites with prebuilt sections.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Drag and drop blocks", "Custom domain support", "SEO basics"],
+    "icon": "/assets/products/portfolio.png"
+  },
+  {
+    "id": 6,
+    "name": "Ecommerce Starter Toolkit",
+    "description": "Launch product pages, checkout flow, and promo bundles quickly.",
+    "price": 99,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Ready storefront blocks", "Payment templates", "Promo banner pack"],
+    "icon": "/assets/products/shopping-cart.png"
+  },
+  {
+    "id": 7,
+    "name": "Growth Analytics Suite",
+    "description": "Monitor conversion trends and uncover top-performing channels.",
+    "price": 79,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["KPI reports", "Funnel tracking", "Export to CSV"],
+    "icon": "/assets/products/operation.png"
+  },
+  {
+    "id": 8,
+    "name": "Client Proposal Pack",
+    "description": "Build polished proposals with pricing tables and timeline blocks.",
+    "price": 39,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Proposal templates", "Editable pricing cards", "PDF-ready export"],
+    "icon": "/assets/products/design-tool.png"
+  }
+]

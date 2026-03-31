@@ -1,13 +1,12 @@
-import React from 'react';
 import { CheckCircle2 } from 'lucide-react'
-import { useState } from 'react';
 
 const Product = ({product,carts,setCarts}) => {
     const{name,description,price,period,tag,tagType,features,icon}=product;
-    const [addedToCart, setAddedToCart]=useState(false)
+    const isInCart = carts.some((cartItem) => cartItem.id === product.id)
+
     const handleBuyNowBtn=()=>{
-        setAddedToCart(true)
-        setCarts([...carts,product])
+        if (isInCart) return
+        setCarts((prevCarts) => [...prevCarts, product])
     }
     
     return (
@@ -56,7 +55,7 @@ const Product = ({product,carts,setCarts}) => {
             {/* Action Button */}
             <div className="mt-auto">
                 <button onClick={()=>handleBuyNowBtn()} className="btn btn-primary w-full rounded-2xl text-white font-bold text-lg border-none bg-linear-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-indigo-600 shadow-lg transform active:scale-95 transition-all duration-300">
-                    {addedToCart ? 'Added To Your Cart':'Buy Now'}
+                    {isInCart ? 'Added To Your Cart':'Buy Now'}
                 </button>
             </div>
         </div>

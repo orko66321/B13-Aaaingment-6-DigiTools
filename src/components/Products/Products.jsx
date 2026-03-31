@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import Product from './product';
+import { useEffect, useState } from 'react'
+import Product from './product'
 
-const Products = ({ setCarts }) => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const Products = ({ carts, setCarts }) => {
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         fetch('/products.json')
             .then((res) => {
-                if (!res.ok) throw new Error('Network response was not ok');
-                return res.json();
+                if (!res.ok) throw new Error('Network response was not ok')
+                return res.json()
             })
             .then((json) => {
-                setData(json);
-                setLoading(false);
+                setData(json)
+                setLoading(false)
             })
             .catch((err) => {
-                setError(err.message || 'Failed to load products');
-                setLoading(false);
-            });
-    }, []);
+                setError(err.message || 'Failed to load products')
+                setLoading(false)
+            })
+    }, [])
 
     if (loading) {
         return (
             <div className='flex justify-center items-center py-20'>
                 <span className='loading loading-spinner text-primary'></span>
             </div>
-        );
+        )
     }
 
     if (error) {
@@ -35,7 +35,7 @@ const Products = ({ setCarts }) => {
             <div className='text-center text-red-600 py-16'>
                 {error}
             </div>
-        );
+        )
     }
 
     return (
@@ -47,11 +47,18 @@ const Products = ({ setCarts }) => {
             </div>
           
             <div className='grid grid-cols-2 md:grid-cols-3  gap-8'>
-                {data.map(product => <Product product={product} key = {product.id} setCarts={setCarts}></Product>)}
+                {data.map((product) => (
+                    <Product
+                        product={product}
+                        key={product.id}
+                        carts={carts}
+                        setCarts={setCarts}
+                    ></Product>
+                ))}
             </div>
             
         </div>
-    );
-};
+    )
+}
 
-export default Products;
+export default Products
