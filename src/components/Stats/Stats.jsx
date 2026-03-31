@@ -6,7 +6,7 @@ const stats = [
 
 function Stats() {
   return (
-    <section className="w-full bg-gradient-to-r from-[#4b35f6] via-[#7a2af8] to-[#ae0ff3]">
+    <section className="w-full bg-linear-to-r from-[#4b35f6] via-[#7a2af8] to-[#ae0ff3]">
       <div className="mx-auto grid w-full max-w-300 grid-cols-1 px-4 py-10 sm:px-6 md:grid-cols-3 md:py-14 lg:px-8">
         {stats.map((item, index) => (
           <div
